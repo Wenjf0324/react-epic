@@ -2206,6 +2206,11 @@ address@1.1.2, address@^1.0.1:
   resolved "https://registry.npm.taobao.org/address/download/address-1.1.2.tgz#bf1116c9c758c51b7a933d296b72c221ed9428b6"
   integrity sha1-vxEWycdYxRt6kz0pa3LCIe2UKLY=
 
+adhere@1.x:
+  version "1.2.3"
+  resolved "https://registry.npm.taobao.org/adhere/download/adhere-1.2.3.tgz#3719ac497758735c817381a756720be7ba0360a2"
+  integrity sha1-NxmsSXdYc1yBc4GnVnIL57oDYKI=
+
 adjust-sourcemap-loader@3.0.0:
   version "3.0.0"
   resolved "https://registry.npm.taobao.org/adjust-sourcemap-loader/download/adjust-sourcemap-loader-3.0.0.tgz?cache=0&sync_timestamp=1603701108010&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fadjust-sourcemap-loader%2Fdownload%2Fadjust-sourcemap-loader-3.0.0.tgz#5ae12fb5b7b1c585e80bbb5a63ec163a1a45e61e"
@@ -3096,6 +3101,11 @@ cache-base@^1.0.1:
     to-object-path "^0.3.0"
     union-value "^1.0.0"
     unset-value "^1.0.0"
+
+cadence@1.x:
+  version "1.0.12"
+  resolved "https://registry.npm.taobao.org/cadence/download/cadence-1.0.12.tgz#6e3bf71404c9f654f8ca31b1474f6fdfab63477a"
+  integrity sha1-bjv3FATJ9lT4yjGxR09v36tjR3o=
 
 call-bind@^1.0.0, call-bind@^1.0.2:
   version "1.0.2"
@@ -4277,6 +4287,15 @@ ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.npm.taobao.org/ee-first/download/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
+
+eject@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.npm.taobao.org/eject/download/eject-0.0.4.tgz#bad7c33522e63fe963ccb713d0cb0ee7a975d8fb"
+  integrity sha1-utfDNSLmP+ljzLcT0MsO56l12Ps=
+  dependencies:
+    adhere "1.x"
+    cadence "1.x"
+    interrupt "1.x"
 
 ejs@^2.6.1:
   version "2.7.4"
@@ -5838,6 +5857,13 @@ internal-slot@^1.0.3:
     get-intrinsic "^1.1.0"
     has "^1.0.3"
     side-channel "^1.0.4"
+
+interrupt@1.x:
+  version "1.2.0"
+  resolved "https://registry.npm.taobao.org/interrupt/download/interrupt-1.2.0.tgz#8f8e0d0cfba190e74682e82d8f0439205a670209"
+  integrity sha1-j44NDPuhkOdGgugtjwQ5IFpnAgk=
+  dependencies:
+    supersede "1.x"
 
 ip-regex@^2.1.0:
   version "2.1.0"
@@ -10442,6 +10468,11 @@ stylehacks@^4.0.0:
     browserslist "^4.0.0"
     postcss "^7.0.0"
     postcss-selector-parser "^3.0.0"
+
+supersede@1.x:
+  version "1.0.6"
+  resolved "https://registry.npm.taobao.org/supersede/download/supersede-1.0.6.tgz#27ce9eaaf0b81e9ea31d7471c7aa4cb153f50065"
+  integrity sha1-J86eqvC4Hp6jHXRxx6pMsVP1AGU=
 
 supports-color@^5.3.0, supports-color@^5.5.0:
   version "5.5.0"
