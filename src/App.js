@@ -9,9 +9,12 @@ import { Switch, Route } from "react-router-dom";
 // import History from "./pages/History";
 // import About from "./pages/About";
 
+//路由懒加载
 const Home = lazy(() => import("./pages/Home"));
 const History = lazy(() => import("./pages/History"));
 const About = lazy(() => import("./pages/About"));
+const Login = lazy(() => import("./pages/Login"));
+const Register = lazy(() => import("./pages/Register"));
 
 console.log(Loading);
 
@@ -25,6 +28,8 @@ function App() {
             <Route path="/" exact component={Home} />
             <Route path="/history" exact component={History} />
             <Route path="/about" exact component={About} />
+            <Route path="/login" exact component={Login} />
+            <Route path="/register" exact component={Register} />
           </Switch>
         </Suspense>
       </main>
