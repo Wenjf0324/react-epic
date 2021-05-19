@@ -43,4 +43,42 @@ const Auth = {
   },
 };
 
-export { Auth };
+const Uploader = {
+  //上传图片接口
+  add(file, filename) {
+    const item = new AV.Object("Image");
+    const avFile = new AV.File(filename, file);
+    item.set("filename", filename); //文件名
+    item.set("owner", AV.User.current()); //作者
+    item.set("url", avFile); //文件url
+    return new Promise((resolve, reject) => {
+      item.save().then(
+        (serverFile) => {
+          resolve(serverFile);
+        },
+        (error) => {
+          reject(error);
+        }
+      );
+    });
+  },
+  //查询数据
+  find({ page = 0, limit = 10 }) {
+    const query = new AV.Query("Image");
+    query.include("owner"); //查询包含owner字段的所有信息
+    query.limit(limit); //只获取limit条
+    query.skip(page * limit); //跳过的信息
+    query.descending("createdAt"); //降序排列
+    query.equalTo("owner", AV.User.current()); //只限制当前用户
+    return new Promise((resolve, reject) => {
+      query
+        .find()
+        .then((results) => resolve(results))
+        .catch((error) => reject(error));
+    });
+  },
+};
+
+window.Uploader = Uploader;
+
+export { Auth, Uploader };

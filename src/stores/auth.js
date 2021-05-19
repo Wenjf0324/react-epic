@@ -1,6 +1,9 @@
 import { observable, action, makeObservable } from "mobx";
 import { Auth } from "../models";
 import UserStore from "./user";
+import HistoryStore from "./history";
+import ImageStore from "./image";
+import { message } from "antd";
 
 class AuthStore {
   //解决版本问题带来的用户名不同步
@@ -29,6 +32,7 @@ class AuthStore {
         })
         .catch((err) => {
           UserStore.resetUser();
+          message.error("登录失败");
           reject(err);
         });
     });
@@ -43,6 +47,7 @@ class AuthStore {
         })
         .catch((err) => {
           UserStore.resetUser();
+          message.error("注册失败");
           reject(err);
         });
     });
@@ -51,6 +56,8 @@ class AuthStore {
   @action logout() {
     Auth.logout();
     UserStore.resetUser();
+    HistoryStore.reset();
+    ImageStore.reset();
   }
 }
 
